@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 23rd Birthday my love ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', sans-serif; background: #080608; color: white; overflow-x: hidden; }
+button { font-family: inherit; }
+
+/* OPENING SCREEN */
+.opening {
+    position: fixed; inset: 0;
+    background: radial-gradient(circle at center, rgba(155,53,88,0.35), transparent 45%), #080608;
+    z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+.opening.hide { opacity: 0; visibility: hidden; }
+.opening-content { padding: 30px; animation: openingFade 2s ease; }
+.opening-small { color: #d39aae; letter-spacing: 5px; font-size: 12px; text-transform: uppercase; margin-bottom: 20px; }
+.opening h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(55px, 10vw, 100px); line-height: 0.9; margin-bottom: 25px; }
+.opening h1 span { color: #d995ae; }
+.opening p { color: #cfc3c9; margin-bottom: 35px; }
+.enter-button {
+    border: 1px solid #d995ae; background: transparent; color: #e5a9bd;
+    padding: 14px 35px; cursor: pointer; letter-spacing: 3px; text-transform: uppercase; transition: 0.4s;
+}
+.enter-button:hover { background: #d995ae; color: #080608; }
+@keyframes openingFade {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* MUSIC BUTTON */
+.music-button {
+    position: fixed; top: 20px; right: 20px; width: 50px; height: 50px; border-radius: 50%;
+    border: 1px solid rgba(225,150,175,0.5); background: rgba(10,5,9,0.8); color: #e0a0b7;
+    cursor: pointer; z-index: 5000; font-size: 20px; backdrop-filter: blur(10px);
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 30px; position: relative;
+    background:
+        radial-gradient(circle at 50% 10%, rgba(159,49,85,0.35), transparent 45%),
+        linear-gradient(rgba(8,6,8,0.62), rgba(8,6,8,0.82)),
+        url('background.jpg') center / cover no-repeat,
+        linear-gradient(135deg, #080608, #180b12, #080608);
+}
+.hero-content { max-width: 900px; animation: heroFade 2s ease; }
+.hero-small { color: #d39aae; letter-spacing: 5px; font-size: 13px; text-transform: uppercase; margin-bottom: 20px; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(65px, 11vw, 125px); line-height: 0.85; font-weight: 600; }
+.hero h1 span { color: #d996af; }
+.hero-subtitle { margin-top: 30px; color: #d0c6cb; font-size: 17px; line-height: 1.9; }
+.scroll-text { margin-top: 60px; color: #a98c98; letter-spacing: 4px; font-size: 11px; }
+@keyframes heroFade {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* SECTION */
+section { padding: 110px 7%; }
+.section-heading { text-align: center; margin-bottom: 60px; }
+.section-heading span { color: #ca8da5; font-size: 12px; letter-spacing: 5px; text-transform: uppercase; }
+.section-heading h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(45px, 6vw, 70px); font-weight: 500; margin-top: 10px; }
+
+/* A SPECIAL DAY FOR YOU */
+.special-day {
+    background:
+        radial-gradient(circle at 50% 0%, rgba(159,49,85,0.28), transparent 55%),
+        #0d090c;
+    text-align: center;
+}
+.special-day-content { max-width: 800px; margin: auto; }
+.special-day-heart { font-size: 54px; margin-bottom: 18px; }
+.special-day-label { color: #ca8da5; font-size: 12px; letter-spacing: 5px; text-transform: uppercase; }
+.special-day h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(45px, 7vw, 82px);
+    font-weight: 500;
+    line-height: 1.05;
+    margin-top: 14px;
+}
+.special-day h2 span { color: #dc9bb3; }
+.special-day-text { color: #d0c5cb; line-height: 2.1; font-size: 17px; margin-top: 35px; }
+.special-day-text strong, .special-day .si strong { color: #e8a9bf; font-weight: 600; }
+.special-day .si { text-align: center; margin-top: 18px; }
+.special-day-date {
+    display: inline-block;
+    margin-top: 45px;
+    padding: 14px 28px;
+    border: 1px solid rgba(215,140,165,0.3);
+    background: rgba(255,255,255,0.03);
+    color: #e5a9bd;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+/* STORY */
+.story { max-width: 900px; margin: auto; text-align: center; }
+.story p { color: #d0c5cb; line-height: 2.1; font-size: 17px; }
+.pink { color: #dc9bb3; }
+.main-photo { max-width: 900px; height: 550px; margin: 60px auto 0; overflow: hidden; border: 1px solid rgba(220,140,165,0.35); }
+.main-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: 1s; }
+.main-photo:hover img { transform: scale(1.04); }
+
+/* QUOTE */
+.quote-section {
+    background: linear-gradient(rgba(7,4,7,0.82), rgba(7,4,7,0.9)), radial-gradient(circle, #64243f, #080608);
+    text-align: center;
+}
+.quote { max-width: 950px; margin: auto; }
+.quote h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 6vw, 75px); font-weight: 400; line-height: 1.15; }
+.quote p { color: #b9aab1; margin-top: 30px; }
+
+/* GALLERY */
+.gallery { max-width: 1150px; margin: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.gallery-item { height: 350px; overflow: hidden; background: #130e12; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: 0.7s; }
+.gallery-item:hover img { transform: scale(1.08); }
+
+/* TIMELINE */
+.timeline { max-width: 900px; margin: auto; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(220,145,170,0.3); }
+.timeline-item { width: 50%; padding: 25px 45px; position: relative; }
+.timeline-item:nth-child(odd) { text-align: right; }
+.timeline-item:nth-child(even) { margin-left: 50%; }
+.timeline-dot { position: absolute; width: 12px; height: 12px; border-radius: 50%; background: #d994ad; top: 35px; }
+.timeline-item:nth-child(odd) .timeline-dot { right: -6px; }
+.timeline-item:nth-child(even) .timeline-dot { left: -6px; }
+.timeline-item h3 { font-family: 'Cormorant Garamond', serif; color: #df9fb7; font-size: 30px; }
+.timeline-item p { color: #bdb1b7; line-height: 1.8; margin-top: 10px; }
+
+/* LOVE LETTER */
+.letter-section { background: #0c080b; }
+.letter {
+    max-width: 850px; margin: auto; padding: 55px;
+    border: 1px solid rgba(220,140,165,0.25);
+    background: linear-gradient(145deg, rgba(255,255,255,0.025), rgba(200,100,130,0.03));
+}
+.letter h3 { font-family: 'Cormorant Garamond', serif; color: #e0a1b8; font-size: 42px; margin-bottom: 30px; }
+.letter p { color: #cec3c9; line-height: 2; margin-bottom: 20px; }
+
+/* 23 REASONS */
+.reasons { max-width: 900px; margin: auto; }
+.reason { display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.reason-number { color: #d998b0; font-family: 'Cormorant Garamond', serif; font-size: 30px; min-width: 45px; }
+.reason p { color: #cfc4c9; line-height: 1.7; }
+
+/* PASSWORD */
+.password-section { text-align: center; background: radial-gradient(circle at center, rgba(110,35,65,0.25), transparent 50%); }
+.password-box { max-width: 500px; margin: auto; }
+.password-box input {
+    width: 100%; padding: 16px 20px; background: #100b0f;
+    border: 1px solid rgba(220,140,165,0.3); color: white; outline: none; text-align: center; font-size: 15px;
+}
+.password-box button { margin-top: 15px; padding: 14px 30px; background: #d994ad; color: #080608; border: none; cursor: pointer; letter-spacing: 2px; }
+.password-message { margin-top: 30px; color: #dda0b8; display: none; line-height: 1.8; }
+
+/* HEART SURPRISE */
+.surprise { text-align: center; background: #090709; }
+.heart-button {
+    width: 115px; height: 115px; border-radius: 50%; border: 1px solid #db96af;
+    background: rgba(220,145,170,0.06); color: #e4a1b8; font-size: 48px; cursor: pointer; transition: 0.5s;
+}
+.heart-button:hover { transform: scale(1.12); box-shadow: 0 0 50px rgba(220,140,165,0.25); }
+.secret { max-width: 750px; margin: 40px auto 0; opacity: 0; transform: translateY(30px); transition: 1s; pointer-events: none; }
+.secret.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.secret h2 { font-family: 'Cormorant Garamond', serif; color: #e1a0b8; font-size: 48px; }
+.secret p { color: #cfc3c9; line-height: 2; margin-top: 20px; }
+
+/* FINAL */
+.final {
+    min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;
+    background:
+        radial-gradient(circle at center, rgba(140,40,75,0.32), transparent 55%),
+        linear-gradient(rgba(8,6,8,0.65), rgba(8,6,8,0.85)),
+        url('background2.jpg') center / cover no-repeat,
+        #080608;
+}
+.final h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(65px, 11vw, 120px); line-height: 0.85; }
+.final h2 span { color: #da96ae; }
+.final p { margin-top: 25px; color: #c4b8be; }
+
+/* FOOTER */
+footer { text-align: center; padding: 30px; background: #050405; color: #766c72; font-size: 11px; }
+
+/* FALLING PETALS / HEARTS */
+.petal { position: fixed; top: -30px; z-index: 4000; pointer-events: none; animation: fall linear forwards; }
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 750px) {
+    section { padding: 80px 6%; }
+    .gallery { grid-template-columns: 1fr; }
+    .gallery-item { height: 400px; }
+    .main-photo { height: 380px; }
+    .timeline::before { left: 10px; }
+    .timeline-item { width: 100%; margin-left: 0 !important; padding-left: 40px; text-align: left !important; }
+    .timeline-dot { left: 4px !important; right: auto !important; }
+    .letter { padding: 30px 22px; }
+    .special-day-date { padding: 12px 18px; font-size: 12px; letter-spacing: 1px; }
+}
+
+/* SINHALA TEXT */
+.si {
+    display: block;
+    font-family: 'Noto Sans Sinhala', 'Iskoola Pota', 'Nirmala UI', sans-serif;
+    font-weight: 400;
+    font-size: 0.95em;
+    line-height: 2.1;
+    color: #e6b8c9;
+    margin-top: 12px;
+}
+.si-title {
+    font-size: clamp(22px, 3.2vw, 32px);
+    margin-top: 8px;
+    color: #dca2b9;
+}
+.opening .si, .hero .si { text-align: center; }
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: #080608; }
+::-webkit-scrollbar-thumb { background: #8f4a63; }
+</style>
+</head>
+
+<body>
+
+<!-- OPENING SCREEN -->
+<div class="opening" id="opening">
+    <div class="opening-content">
+        <div class="opening-small">A little surprise for you...</div>
+        <h1>For <span> Baby</span> ❤️</h1>
+        <p>There is something I made just for you.<span class="si">මේ තෑග්ග ඔයාට විතරමයි.. ❤️</span></p>
+        <button class="enter-button" onclick="enterWebsite()">Open Your Surprise</button>
+    </div>
+</div>
+
+<!-- MUSIC -->
+<audio id="music" src="C:\Users\ASus\bd\music.mp3.mp3" loop></audio>
+
+<button class="music-button" onclick="toggleMusic()" id="musicButton">🎵</button>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-small">A birthday made with love</div>
+        <h1>Happy 23rd<br><span>Baby❤️</span></h1>
+        <div class="hero-subtitle">
+            To the person who turned ordinary moments<br>
+            into some of my favourite memories... 🥹❤️
+            <span class="si">සුභ 23 වෙනි උපන්දිනයක්, බබී! සාමාන්‍ය මොහොතවල් පවා මගේ ලස්සනම මතක බවට පත් කළ ඔබට... 🥹❤️</span>
+        </div>
+        <div class="scroll-text">KEEP SCROLLING ↓</div>
+    </div>
+</section>
+
+<!-- A SPECIAL DAY FOR YOU -->
+<section class="special-day">
+
+    <div class="special-day-content">
+
+        <div class="special-day-heart">🎂❤️</div>
+
+        <div class="special-day-label">
+            A Little Birthday Surprise
+        </div>
+
+        <h2>
+            A Special Day<br>
+            <span>For You,Love✨</span>
+        </h2>
+
+        <p class="special-day-text">
+            Some days are special because they are birthdays...
+            <br>
+            But this day is special to me because
+            <strong>you</strong> were born. ❤️
+        </p>
+
+        <p class="si">
+            සමහර දවස් විශේෂ වෙන්නේ ඒවා උපන්දින නිසා...
+            <br>
+            ඒත් මේ දවස විශේෂ වෙන්නේ
+            <strong>ඔයා මේ ලෝකෙට ආපු දවස නිසා. ❤️</strong>
+        </p>
+
+        <div class="special-day-date">
+            🎂 10 October 2026 • Janidu's 23rd Birthday
+        </div>
+
+    </div>
+
+</section>
+
+<!-- OUR STORY -->
+<section>
+    <div class="section-heading">
+        <span>Our journey</span>
+        <h2>Our Little Story 🤍</h2>
+    </div>
+
+    <div class="story">
+        <p>
+            <span class="pink">EXAMPLE:</span>
+            Four years ago, I never knew that one person
+            could become such a beautiful part of my life.
+            <br><br>
+            But then I met you, Janidu.
+            From our first conversations to all the random calls,
+            little arguments, laughter, tears and unforgettable memories...
+            somehow, you became someone I never want to lose.
+            <br><br>
+            We've had perfect days, difficult days, crazy days,
+            and days where we simply didn't understand each other.
+            But through everything,
+            <span class="pink">we are still here.</span>
+            <br><br>
+            And that's one of the things I treasure most about us.
+            I don't know exactly what the future looks like,
+            but I know that I want many more chapters with you. ❤️
+            <br><br>
+            <span class="si">අවුරුදු හතරකට මගේ ජීවිතේට ඔයා ආපු දවසේ ඉඳන් අපි කොච්චර දේවල් පහු කරලා ආවද නේද? සතුටු වුණු දවස්, රණ්ඩු වුණු දවස්, එකිනෙකාව මඟහැරුණු වෙලාවල්, ආයෙත් ළං වුණු මොහොතවල්…කලින්, එක කෙනෙක් මගේ ජීවිතයේ මෙතරම් ලස්සන කොටසක් වෙයි කියලා මම හිතුවේ නෑ...මම ප්‍රාර්ථනා කරන්නේ ඔයාගේ ජීවිතේ හැම දවසක්ම සතුටින් පිරෙන්න කියලා. ඔයා මහන්සි වෙලා හදන හැම හීනයක්ම සැබෑ වෙන්න කියලා. ඔයාගේ හිතට බරක් දැනෙන දවස් අඩු වෙලා, හිනාවෙන්න හේතු වැඩි වෙන්න කියලා...ජීවිතේ හැමදේම හැමදාම ලස්සනටම වෙන්නේ නැති වෙයි. ඒත් අපි දෙන්නට එකිනෙකාව තේරුම් අරගෙන, වැරදුණු තැන් හදාගෙන, ලස්සන මතක තව තවත් එකතු කරගෙන ඉස්සරහට යන්න ඕනේ..මට ඔයා එක්ක තවත් ලස්සන මතක ගොඩක් එකතු කරගන්න ඕනේ. අපේ කතාව තව ලස්සනට ලියවෙන්න ඕනේ. 🥹❤️.</span>
+            <span class="si">අපිට පරිපූර්ණ දවස් තිබුණා, අමාරු දවස් තිබුණා, පිස්සු දවස් තිබුණා. ඒ හැම දෙයක් අස්සේම අපි තාමත් මෙතන ඉන්නවා. ඔබ එක්ක තව බොහෝ පරිච්ඡේද ලියන්න මම ආසයි. ❤️</span>
+        </p>
+    </div>
+
+    <div class="main-photo">
+        <img src="C:\Users\ASus\bd\photo (0).jpg" alt="EXAMPLE Couple Photo">
+    </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-section">
+    <div class="quote">
+        <h2>“I don't need a perfect story.<br>I just want more chapters with you.”</h2>
+        <p class="si si-title">“මට පරිපූර්ණ කතාවක් ඕනේ නෑ. ඔයා එක්ක තව පරිච්ඡේද ටිකක් විතරක් ඕනේ.”</p>
+        <p>From the girl who loves you ❤️</p>
+    </div>
+</section>
+
+<!-- MEMORY GALLERY -->
+<section>
+    <div class="section-heading">
+        <span>Our memories</span>
+        <h2>Little Moments 📸</h2>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item"><img src="C:\Users\ASus\bd\photo (1).jpg" alt="EXAMPLE Memory 1"></div>
+        <div class="gallery-item"><img src="C:\Users\ASus\bd\photo (2).jpg" alt="EXAMPLE Memory 2"></div>
+        <div class="gallery-item"><img src="C:\Users\ASus\bd\photo (3).jpg" alt="EXAMPLE Memory 3"></div>
+        <div class="gallery-item"><img src="C:\Users\ASus\bd\photo (4).jpg" alt="EXAMPLE Memory 4"></div>
+        <div class="gallery-item"><img src="C:\Users\ASus\bd\photo (5).jpg" alt="EXAMPLE Memory 5"></div>
+        <div class="gallery-item"><img src="C:\Users\ASus\bd\photo (6).jpg" alt="EXAMPLE Memory 6"></div>
+        <div class="gallery-item"><img src="C:\Users\ASus\bd\photo (7).jpg" alt="EXAMPLE Memory 7"></div>
+        <div class="gallery-item"><img src="C:\Users\ASus\bd\photo (8).jpg" alt="EXAMPLE Memory 8"></div>
+        <div class="gallery-item"><img src="C:\Users\ASus\bd\photo (9).jpg" alt="EXAMPLE Memory 9"></div>
+        <div class="gallery-item"><img src="C:\Users\ASus\bd\photo (10).jpg" alt="EXAMPLE Memory 10"></div>
+    </div>
+</section>
+
+<!-- TIMELINE -->
+<section>
+    <div class="section-heading">
+        <span>Our journey</span>
+        <h2>Four Years With You ❤️</h2>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3>Year One</h3>
+            <p>
+                <span class="pink">EXAMPLE:</span>
+                The beginning of us. New conversations, new feelings, new memories,
+                and the beginning of something I never expected to become so important.
+                <span class="si">අපේ ආරම්භය. අලුත් කතාබහ, අලුත් හැඟීම්, අලුත් මතක, මම කවදාවත් බලාපොරොත්තු නොවුණු විදිහට මට වැදගත් වුණු දෙයක ආරම්භය.</span>
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3>Year Two</h3>
+            <p>
+                <span class="pink">EXAMPLE:</span>
+                We learned more about each other. We laughed, we argued, we grew,
+                and we created memories that I will always keep close to my heart.
+                <span class="si">අපි එකිනෙකා ගැන තව දැනගත්තා. සිනාසුණා, තර්ක කළා, වැඩුණා, හදවතට ළං කරගෙන තියාගන්න මතක හැදුවා.</span>
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3>Year Three</h3>
+            <p>
+                <span class="pink">EXAMPLE:</span>
+                Three years. Not always perfect, but always meaningful.
+                And somehow, after everything, you're still the person I want beside me.
+                <span class="si">අවුරුදු තුනක්. හැමවිටම පරිපූර්ණ නෑ, ඒත් හැමවිටම අර්ථවත්. හැමදේටම පස්සේ ඔබ තාමත් මගේ ළඟ ඉන්න ඕන කෙනා.</span>
+            </p>
+        </div>
+
+         <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <h3>
+                Year Four
+            </h3>
+
+            <p>
+
+                <span class="pink">
+                    EXAMPLE:
+                </span>
+
+                Four years.
+
+                Four years of memories,
+                laughter,
+                tears,
+                arguments,
+                forgiveness,
+
+                and choosing each other again and again.
+
+                <span class="si">
+
+                    අවුරුදු හතරක්.
+
+                    මතක,
+                    සිනහව,
+                    කඳුළු,
+                    තර්ක,
+                    සමාව දීම්,
+
+                    ආයෙ ආයෙත්
+                    එකිනෙකාව තෝරගත් අවුරුදු හතරක්. ❤️
+
+                </span>
+
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3>Chapter 23</h3>
+            <p>
+                <span class="pink">EXAMPLE:</span>
+                A new age. A new chapter. And hopefully, many more memories waiting for us.
+                Happy 23rd, my love. ❤️
+                <span class="si">අලුත් වයසක්, අලුත් පරිච්ඡේදයක්. අපිව බලාගෙන ඉන්න තව බොහෝ මතක. සුභ 23 වෙනි උපන්දිනයක්, මගේ ආදරේ ❤️</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- LOVE LETTER -->
+<section class="letter-section">
+    <div class="section-heading">
+        <span>A letter for you</span>
+        <h2>Dear World... 💌</h2>
+    </div>
+
+    <div class="letter">
+        <h3>My Love,</h3>
+
+        <p>
+            <span class="pink"></span>
+            Happy 23rd Birthday to the person who has become such a special part of my life.
+        </p>
+
+        <p>
+            If someone had told me a few years ago that I would meet someone who could make me
+            laugh, cry, get angry, feel safe, and feel loved all at the same time...
+            I probably wouldn't have believed them.
+            But then there was you.
+        </p>
+
+        <p>
+            We've been through so many different moments.
+            Some were beautiful. Some were difficult.
+            Some made us laugh until we couldn't breathe.
+            And some taught us things about each other that we probably wouldn't have learned otherwise.
+        </p>
+
+        <p>
+            But every single moment became part of our story.
+            And that's what makes our relationship special to me.
+            It's not because everything is perfect.
+            It's because we continue to choose each other through the imperfect moments too.
+        </p>
+
+        <p>
+            On your 23rd birthday, I wish you happiness that lasts,
+            success that makes you proud, peace in your heart,
+            and the courage to chase everything you dream about.
+        </p>
+
+        <p>
+            And selfishly... I hope I get to be there for many more birthdays,
+            many more adventures, many more silly conversations,
+            many more photographs, and many more chapters.
+        </p>
+
+        <p>
+            Thank you for being you.
+            Thank you for the memories.
+            Thank you for being part of my life.
+        </p>
+
+        <p>
+            <span class="pink">I love you more than these words can ever explain. ❤️</span>
+            <span class="si">.</span>ආදරණීය බබී ❤️,මගේ ජීවිතයේ මෙතරම් විශේෂ කොටසක් වුණාට බොහොම ස්තූතියි. අපි එකට ගත කළ හැම මොහොතක්ම, සතුටු වුණ ඒවා වුණත් අමාරු වුණ ඒවා වුණත්, අපේ කතාවේ කොටසක් වුණා.
+            <span class="si">කවදාවත් නොමැකෙන සතුටත්, ආඩම්බර වෙන්න පුළුවන් සාර්ථකත්වයත්,ලැබෙන්න කියලා ප්‍රාර්ථනා කරනවා.
+
+        <p>
+            Forever yours,<br>
+            <strong>your love kavi ❤️</strong>
+        </p>
+    </div>
+</section>
+
+<!-- 23 REASONS -->
+<section>
+    <div class="section-heading">
+        <span>23 things I love about you</span>
+        <h2>23 Little Reasons ❤️</h2>
+    </div>
+
+    <div class="reasons">
+        <div class="reason"><div class="reason-number">01</div><p>I love the way you make me smile.</p></div>
+        <div class="reason"><div class="reason-number">02</div><p>I love how comfortable I feel around you.</p></div>
+        <div class="reason"><div class="reason-number">03</div><p>Your random messages can completely change my day.</p></div>
+        <div class="reason"><div class="reason-number">04</div><p>I love the way you care about little things.</p></div>
+        <div class="reason"><div class="reason-number">05</div><p>You somehow know when I need you.</p></div>
+        <div class="reason"><div class="reason-number">06</div><p>I love our random conversations.</p></div>
+        <div class="reason"><div class="reason-number">07</div><p>I love creating memories with you.</p></div>
+        <div class="reason"><div class="reason-number">08</div><p> You make ordinary days feel special.</p></div>
+        <div class="reason"><div class="reason-number">09</div><p>I love your smile.</p></div>
+        <div class="reason"><div class="reason-number">10</div><p>You make me feel safe.</p></div>
+        <div class="reason"><div class="reason-number">11</div><p>I love your silly side.</p></div>
+        <div class="reason"><div class="reason-number">12</div><p>I love every little memory we've created.</p></div>
+        <div class="reason"><div class="reason-number">13</div><p>I love the way you listen to me.</p></div>
+        <div class="reason"><div class="reason-number">14</div><p>I love our inside jokes.</p></div>
+        <div class="reason"><div class="reason-number">15</div><p>I love being completely myself with you.</p></div>
+        <div class="reason"><div class="reason-number">16</div><p>You make me feel loved.</p></div>
+        <div class="reason"><div class="reason-number">17</div><p>I love every adventure we have together.</p></div>
+        <div class="reason"><div class="reason-number">18</div><p>I love your little habits.</p></div>
+        <div class="reason"><div class="reason-number">19</div><p>You are part of my happiest memories.</p></div>
+        <div class="reason"><div class="reason-number">20</div><p>I love how we can laugh about the smallest things.</p></div>
+        <div class="reason"><div class="reason-number">21</div><p>I love the person you are.</p></div>
+        <div class="reason"><div class="reason-number">22</div><p>I love the journey we've shared.</p></div>
+        <div class="reason"><div class="reason-number">23</div><p>Because after everything... I still choose you. ❤️</p></div>
+    </div>
+</section>
+
+<!-- PASSWORD SURPRISE -->
+<section class="password-section">
+    <div class="section-heading">
+        <span>A secret for you</span>
+        <h2>One More Surprise 🔐</h2>
+    </div>
+
+    <div class="password-box">
+        <p style="color:#bdb1b7;margin-bottom:20px;">
+            Hint: The special number in this website...
+            <span class="si">ඉඟිය: මේ වෙබ් අඩවියේ තියෙන විශේෂ අංකය...</span>
+        </p>
+
+        <input type="password" id="passwordInput" placeholder="Enter the secret password">
+
+        <button onclick="checkPassword()">Unlock ❤️</button>
+
+        <div class="password-message" id="passwordMessage">
+            <h3>You Found It! 🥹❤️</h3>
+            <br>
+             If you're reading this, remember that no matter how many
+            pages this website has... my favourite part will always be
+            the memories we created together.
+            <span class="si">ඔබ සොයාගත්තා! 🥹❤️ මේ වෙබ් පිටුවේ කොච්චර පිටු තිබුණත්, මගේ ප්‍රියතම කොටස හැමවිටම අපි එකට හදපු මතක තමයි. සුභ උපන්දිනයක්, මගේ ආදරේ ❤️</span>
+            Happy Birthday, my love. ❤️
+        </div>
+    </div>
+</section>
+
+<!-- HEART SURPRISE -->
+<section class="surprise">
+    <div class="section-heading">
+        <span>Last little surprise</span>
+        <h2>Touch My Heart ❤️</h2>
+    </div>
+
+    <button class="heart-button" onclick="heartSurprise()">❤️</button>
+
+    <div class="secret" id="secret">
+        <h2>For You, Janidu... 🥹❤️</h2>
+
+        <p>
+            <span class="pink"></span>
+            If I could give you one thing for your birthday,
+            I would give you the ability to see yourself through my eyes.
+            Then you would understand just how special you are to me.
+            <br><br>
+            Thank you for every smile, every memory, every conversation,
+            every hug, and every little moment.
+            <br><br>
+            Happy 23rd Birthday, my love. 🎂❤️
+            <br><br>
+            I hope this new chapter brings you everything you've been dreaming about.
+            And I hope I get to be beside you for many more birthdays.
+            <br><br>
+            <strong>I love you. Always. ❤️</strong>
+            <br><br>
+            <span class="si">මම තෑග්ගක් දෙනවා නම්,මගේ ඇස්වලින් බලන්න දෙනවා. ඔයා මට කොච්චර වටින කෙනෙක්ද, මගේ ජීවිතේ කොච්චර ලස්සන තැනක් ඔයාට තියෙනවද කියලා ඔයාටම තේරෙයි. </span>
+            <span class="si">❤️මේ අලුත් පරිච්ඡේද සිහින දකින හැමදේම ගෙනෙත්වා.ආදරෙයි. හැමදාමත්. ❤️</span>
+        </p>
+    </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+    <div>
+        <h2>Chapter <span>23</span><br>Begins. ✨</h2>
+
+        <p>EXAMPLE: Happy Birthday, Janidu Perera ❤️</p>
+
+        <p>
+            May your 23rd year bring you success, happiness, peace,
+            love and beautiful memories.
+        </p>
+
+        <p>And may our story continue for many more chapters.</p>
+
+        <p class="si">සුභ උපන්දිනයක් ❤️ ඔබේ 23 වෙනි වසර සාර්ථකත්වයෙන්, සතුටින්, සාමයෙන්, ආදරයෙන් සහ ලස්සන මතකයන්ගෙන් පිරේවා. අපේ කතාව තවත් බොහෝ පරිච්ඡේද දක්වා දිගටම ඇදේවා. මගේ සම්පූර්ණ ආදරයෙන් මගෙත් එකම ප්‍රාර්ථනාව එයයි
+නුබ නැතිදාක මේ ජීවන මග යන්න....මට සවි නොමැත ඔබ මා ගිය පසු එන්න ....☺️මේ අවුරුදු හතරට  දැනුනා ඔයා නැතුව ඉන්න බෑ කියල, කොයි තරම් ප්‍රශ්න උනත් අපි තරහ උනත් ,අයෙත් හොදින් ඉදියා,මගේ ලගින් හැමදේකටම මං එක්ක ඉදියා,යාලුවෙක් වගේ  ඉන්න ඔයා තාත්තා කෙනෙක් වගේ මං බලාගන්නවා,මේ ජිවිතේ ඉතුරු ටික කාලෙත් ඒ වගේම මං එක්ක ඉන්න සුදූ ඒ ඇති මට, ඔයා නැතුව වැඩක් කරගන්නවත් බෑ හැමදෙයක්ම ඔයා එක්ක බෙදාගත්ත ඒ හින්දා මං එක්ක ඉන්න හැමදාම ..😚❤️💫 ♡</p>
+
+        <br>
+
+        <p>
+            With all my love ♡<br>
+            <strong>your manika ❤️</strong>
+        </p>
+    </div>
+</section>
+
+<footer>
+    EXAMPLE: Made with endless love ❤️ for Janidu's 23rd Birthday
+</footer>
+
+<script>
+/* OPEN WEBSITE */
+let musicPlaying = false;
+
+function enterWebsite() {
+    document.getElementById("opening").classList.add("hide");
+
+    const music = document.getElementById("music");
+    const button = document.getElementById("musicButton");
+
+    music.play().then(() => {
+        musicPlaying = true;
+        button.innerHTML = "🔊";
+    }).catch(() => {
+        musicPlaying = false;
+        button.innerHTML = "🎵";
+    });
+
+    startPetals();
+}
+
+/* MUSIC */
+function toggleMusic() {
+    const music = document.getElementById("music");
+    const button = document.getElementById("musicButton");
+
+    if (musicPlaying) {
+        music.pause();
+        button.innerHTML = "🎵";
+        musicPlaying = false;
+    } else {
+        music.play().then(() => {
+            button.innerHTML = "🔊";
+            musicPlaying = true;
+        }).catch(() => {});
+    }
+}
+
+/* SINHALA — section titles and the 23 reasons */
+const headingsSi = [
+    "අපේ පුංචි කතාව 🤍",
+    "පුංචි මොහොතවල් 📸",
+    "ඔබ සමඟ අවුරුදු තුනක් ❤️",
+    "ජනිදු වෙත... 💌",
+    "ආදරේ කරන හේතු 23ක් ❤️",
+    "තවත් සප්‍රයිස් එකක් 🔐",
+    "මගේ හදවත ඇල්ලුවොත් ❤️"
+];
+
+const reasonsSi = [
+    "ඔබ මාව සිනාසෙන්න සලස්වන විදිහට ආදරෙයි.",
+    "ඔබ ළඟ මට දැනෙන සැනසීමට ආදරෙයි.",
+    "ඔබේ අහඹු පණිවිඩ මගේ මුළු දවසම වෙනස් කරනවා.",
+    "පුංචි දේවල් ගැන ඔබ සලකන විදිහට ආදරෙයි.",
+    "මට ඔබ ඕන වෙලාවල් ඔබ කොහොමහරි දන්නවා.",
+    "අපේ අහඹු කතාබහට ආදරෙයි.",
+    "ඔබ එක්ක මතක හදන්න ආදරෙයි.",
+    "ඔබ සාමාන්‍ය දවස් පවා විශේෂ කරනවා.",
+    "ඔබේ සිනහවට ආදරෙයි.",
+    "ඔබ ළඟ මට ආරක්ෂිත බවක් දැනෙනවා.",
+    "ඔබේ සෙල්ලක්කාර පැත්තට ආදරෙයි.",
+    "අපි හදපු හැම පුංචි මතකයකටම ආදරෙයි.",
+    "ඔබ මට සවන් දෙන විදිහට ආදරෙයි.",
+    "අපේ විහිළු වලට ආදරෙයි.",
+    "ඔබ ළඟ මම මම විදිහටම ඉන්න පුළුවන් වීමට ආදරෙයි.",
+    "ඔබ මට ආදරය දැනෙන්න සලස්වනවා.",
+    "අපි එකට යන හැම චාරිකාවකටම ආදරෙයි.",
+    "ඔබේ පුංචි පුරුදු වලට ආදරෙයි.",
+    "ඔබ මගේ සතුටුම මතකවල කොටසක්.",
+    "පුංචි දේවල් ගැනත් අපිට එකට හිනා වෙන්න පුළුවන්.",
+    "ඔබ කියන කෙනාට ආදරෙයි.",
+    "අපි පැමිණි ගමනට ආදරෙයි.",
+    "මොකද හැමදේටම පස්සේ, මම තාමත් ඔබව තෝරගන්නවා. ❤️"
+];
+
+document.querySelectorAll(".section-heading").forEach((box, i) => {
+    if (!headingsSi[i]) return;
+    const s = document.createElement("span");
+    s.className = "si si-title";
+    s.style.letterSpacing = "0";
+    s.style.textTransform = "none";
+    s.textContent = headingsSi[i];
+    box.appendChild(s);
+});
+
+document.querySelectorAll(".reason p").forEach((p, i) => {
+    if (!reasonsSi[i]) return;
+    const s = document.createElement("span");
+    s.className = "si";
+    s.style.marginTop = "6px";
+    s.textContent = reasonsSi[i];
+    p.appendChild(s);
+});
+
+/* PASSWORD — example password is 23 */
+function checkPassword() {
+    const password = document.getElementById("passwordInput").value.trim();
+    const message = document.getElementById("passwordMessage");
+
+    if (password === "23") {
+        message.style.display = "block";
+        createHeartExplosion();
+    } else {
+        alert("Wrong password ❤️ Try again!");
+    }
+}
+
+/* HEART SURPRISE */
+function heartSurprise() {
+    document.getElementById("secret").classList.add("show");
+    createHeartExplosion();
+}
+
+/* HEART EXPLOSION */
+function createHeartExplosion() {
+    for (let i = 0; i < 35; i++) {
+        const heart = document.createElement("div");
+        heart.className = "petal";
+        heart.innerHTML = Math.random() > 0.5 ? "❤️" : "🌹";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (14 + Math.random() * 25) + "px";
+        heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 7000);
+    }
+}
+
+/* FALLING ROSE PETALS */
+function startPetals() {
+    const flowers = ["🌹", "🌸", "❤️", "✨"];
+
+    setInterval(() => {
+        const petal = document.createElement("div");
+        petal.className = "petal";
+        petal.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+        petal.style.left = Math.random() * 100 + "vw";
+        petal.style.fontSize = (12 + Math.random() * 18) + "px";
+        petal.style.animationDuration = (5 + Math.random() * 5) + "s";
+        document.body.appendChild(petal);
+        setTimeout(() => petal.remove(), 10000);
+    }, 700);
+}
+</script>
+
+</body>
+</html>
